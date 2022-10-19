@@ -63,3 +63,18 @@ function profile(){
     profile.style.display = 'block';
 }
     
+/* link open chat*/
+
+function open_chat(){
+    var link = document.getElementById('open-link');
+    var back = document.getElementById('page1');
+    back.style.display = 'block';
+    link.style.display = 'none';
+}
+
+function close_chat(){
+    var link = document.getElementById('open-link');
+    var back = document.getElementById('page1');
+    back.style.display = 'none';
+    link.style.display = 'block';
+}

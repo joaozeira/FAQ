@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
 
 html,
@@ -37,6 +37,7 @@ body {
   width: 320px;
   background: #d9d9d9;
   border-radius: 10px 10px 0px 0px;
+  transition: .6s;
 }
 
 .chatbot-doubts .header {
@@ -82,9 +83,6 @@ body {
   cursor: pointer;
 }
 
-
-
-
 .chatbot-doubts .title {
   height: 60px;
   width: 100%;
@@ -107,25 +105,61 @@ body {
 }
 
 .chatbot-doubts .doubts {
+  height: 275px;
+  overflow: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column;  
+  border-bottom: 3px solid #d9d9d9;
+  border-right: 3px solid #d9d9d9;
+}
+.chatbot-doubts .cards:first-child{
+  margin-top: 280px;
+}
+
+::-webkit-scrollbar{
+  background-color: transparent;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #fff;
+  border-radius: 3px;
 }
 
 .chatbot-doubts .cards {
-  height: 60px;
+  min-height: 69px;
   width: 98%;
   background-color: #fff;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 7px;
-  border: none;
+
+  border-left: 3px solid #d9d9d9;    
+  border-right: none;  
+  border-bottom: 3px solid #d9d9d9;  
+  border-top: 3px solid #d9d9d9;  
+  cursor: pointer;
 }
 
-.chatbot-doubts .cards p {
+.chatbot-doubts .last-card{
+  min-height: 60px;
+  width: 100%;
+  background-color: #0597f2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7px;
+  border: none;  
+  cursor: pointer;
+}
+.chatbot-doubts .last-card p{
+  color: #fff;
+}
+
+.chatbot-doubts p {
   color: rgba(0, 0, 0, 0.6);
   font-family: "Poppins";
   font-style: normal;
@@ -161,6 +195,8 @@ body {
   height: 45px;
   width: 45px;
   text-align: center;
+  color: #fff;
+  cursor: pointer;
 }
 
 .chatbot-message .header-message p {
@@ -280,8 +316,8 @@ body {
   border-radius: 20px 20px 20px 0px;
 }
 
-/* perfil */
-
+/* /* perfil */
+/* 
 .perfil {
   display: none;
   height: 475px;
@@ -351,7 +387,7 @@ body {
   height: 35px;
   width: 35px;
   border-radius: 50%;
-}
+} */
 
 /* id perguntas */
 #c2,

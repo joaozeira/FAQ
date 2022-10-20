@@ -56,12 +56,12 @@ function duvida4(){
 
 /* perfil */
 
-function profile(){
+/* function profile(){
     var show = document.getElementById('page2');
     var profile = document.getElementById("profile");
     show.style.display = 'none';    
     profile.style.display = 'block';
-}
+} */
     
 /* link open chat*/
 

@@ -1,158 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CHAT</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  </head>
 
-  <body>
-    <h1 style="font-size: 150px">clickmassa</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHAT</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
 
-    <a class="faq-link" id="open-link">
-      <img onclick="open_chat()" src="user.png" alt="" />
-    </a>
+<body>
+  <!-- ilustração do clickmassa -->
+  <h1 style="font-size: 150px">clickmassa</h1>
+  <!-- Botão para abrir o FAQ -->
+  <div class="faq-open" id="open-link">
+    <!-- abrir faq -->
+    <img onclick="open_chat()" src="user.png" alt="" />
+  </div>
+  <!-- notificação após algum tempo -->
+  <div class="notification" id="showNotification">
+    <div class="popup">
+      <h1>1</h1>
+    </div>
+    <div class="text">
+      <p>Alguma duvida?</p>
+    </div>
+  </div>
 
-    
-    <div class="faq-chat">
-      <!-- page 1 -->
-      <div class="chatbot-doubts" id="page1">
-        <div class="header">
-          <div class="header-details" >
-            <img src="user.png" alt="" />
-            <h3>Massinha</h3>  
-          </div>
-          <div class="close_chat">
-            <a onclick="close_chat()">x</a>
-          </div>          
+  <!-- FAQ -->
+  <div class="faq">
+    <!-- page 1 -->
+    <div class="chat-questions" id="questions">
+      <div class="header">
+        <div class="details">
+          <img src="user.png" />
+          <h3>Massinha</h3>
         </div>
-
-        <div class="title">
-          <h1>Principais duvidas</h1>
+        <div class="close_chat">
+          <svg onclick="close_chat()" width="15" height="46" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m18.75 5.25-13.5 13.5"></path>
+            <path d="M18.75 18.75 5.25 5.25"></path>
+          </svg>
         </div>
+      </div>
 
-        <div class="doubts">
-          <button class="cards" onclick="duvida1()">
+      <div class="title">
+        <h1>Principais duvidas</h1>
+      </div>
+
+      <div class="group-cards">
+        <div class="cards">
+          <button class="card" onclick="duvida1()">
             <p>Pergunta 1</p>
           </button>
-          <button class="cards" onclick="duvida2()">
+          <button class="card" onclick="duvida2()">
             <p>Pergunta 2</p>
           </button>
-          <button class="cards" onclick="duvida3()">
+          <button class="card" onclick="duvida2()">
             <p>Pergunta 3</p>
           </button>
-          <button class="cards" onclick="duvida4()">
+          <button class="card" onclick="duvida2()">
             <p>Pergunta 4</p>
           </button>
-          <button class="cards" onclick="duvida4()">
-            <p>Pergunta 4</p>
+          <button class="card" onclick="duvida2()">
+            <p>Pergunta 5</p>
           </button>
-          <button class="cards" onclick="duvida4()">
-            <p>Pergunta 4</p>
+          <button class="card" onclick="duvida2()">
+            <p>Pergunta 6</p>
           </button>
-          <button class="cards" onclick="duvida4()">
-            <p>Pergunta 4</p>
+          <button class="card" onclick="duvida2()">
+            <p>Pergunta 7</p>
           </button>
-          <button class="last-card" onclick="last-cards()">
-            <p>Não achou o que estava procurando?</p>
-          </button>
-         
+        </div>
+
+        <button class="last-cards" onclick="lastCards()">
+          <p>Não achou o que estava procurando?</p>
+        </button>
+      </div>        
+      </div>
+
+      <div class="contatos" id="contact" onclick="lastCard()">
+        <div class="header-contato">
+          <svg onclick="closeLastcard()" width="15" height="46" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="m18.75 5.25-13.5 13.5"></path>
+            <path d="M18.75 18.75 5.25 5.25"></path>
+          </svg>
+        </div>
+
+        <div class="details">
+          <h1>Não achou o que estava procurando?</h1>
+        </div>
+ 
+    </div>
+
+    <!-- page 2 -->
+    <div class="chat-answers" id="answers" >
+      <div class="header-answers">        
+        <svg onclick="back()" width="15" height="46" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 19.5 7.5 12 15 4.5"></path>
+        </svg>
+        <div>
+          <h3>Massinha</h3>
+          <p>Online</p>
+        </div>
+        <img onclick="profile()" src="user.png" alt="" />
+      </div>
+
+      <!-- perguntas -->
+      <div class="chat-box" id="c1">
+        <div class="chat outgoing">
+          <div class="details">
+            <p>DUVIDA 1</p>
+          </div>
+        </div>
+        <!-- respostas -->
+        <div class="chat incoming">
+          <img src="user.png" alt="" />
+          <div class="details">
+            <p>
+              <strong>RESPOSTA:</strong> <br />
+              <strong>1.</strong> RESPOSTA 1 <br />
+            </p>
+          </div>
         </div>
       </div>
 
-      <!-- page 2 -->
-      <div class="chatbot-message" id="page2">
-        <div class="header-message">
-          <a onclick="back()"><h1><</h1></a>
-          <div>
-            <h3>Massinha</h3>
-            <p>Online</p>
-          </div>
-          <img onclick="profile()" src="user.png" alt="" />
-        </div>
 
-        <!-- DUVIDA 1 -->
-        <div class="chat-box" id="c1">
-          <div class="chat outgoing">
-            <div class="details">
-              <p>DUVIDA 1</p>
-            </div>
-          </div>
-          <!-- RESPOSTA 1 -->
-          <div class="chat incoming">
-            <img src="user.png" alt="" />
-            <div class="details">
-              <p>
-                <strong>RESPOSTA:</strong> <br />
-                <strong>1.</strong> RESPOSTA 1 <br />
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- DUVIDA 2 -->
-        <div class="chat-box" id="c2">
-          <div class="chat outgoing">
-            <div class="details">
-              <p>DUVIDA 2</p>
-            </div>
-          </div>
-          <!-- RESPOSTA 1 -->
-          <div class="chat incoming">
-            <img src="user.png" alt="" />
-            <div class="details">
-              <p>
-                <strong>RESPOSTA:</strong> <br />
-                <strong>1.</strong> RESPOSTA 2 <br />
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- DUVIDA 3 -->
-        <div class="chat-box" id="c3">
-          <div class="chat outgoing">
-            <div class="details">
-              <p>DUVIDA 3</p>
-            </div>
-          </div>
-          <!-- RESPOSTA 1 -->
-          <div class="chat incoming">
-            <img src="user.png" alt="" />
-            <div class="details">
-              <p>
-                <strong>RESPOSTA:</strong> <br />
-                <strong>1.</strong> RESPOSTA 3 <br />
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- DUVIDA 4 -->
-        <div class="chat-box" id="c4">
-          <div class="chat outgoing">
-            <div class="details">
-              <p>DUVIDA 4</p>
-            </div>
-          </div>
-          <!-- RESPOSTA 1 -->
-          <div class="chat incoming">
-            <img src="user.png" alt="" />
-            <div class="details">
-              <p>
-                <strong>RESPOSTA:</strong> <br />
-                <strong>1.</strong> RESPOSTA 4 <br />
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <!-- perfil foto -->
       <!-- <div class="perfil" id="profile">
@@ -171,9 +145,10 @@
           </div>
         </div>
       </div> -->
-      
+
     </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>

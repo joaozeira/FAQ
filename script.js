@@ -74,8 +74,10 @@ function open_chat(){
 function close_chat(){
     var link = document.getElementById('open-link');
     var back = document.getElementById('questions');
+    var notification = document.getElementById('showNotification');    
     back.style.display = 'none';
     link.style.display = 'block';
+    notification.style.display = 'none';
 }
 
 function showNotification(){
@@ -92,7 +94,8 @@ function lastCards(){
 
 function closeLastcard(){
     var question = document.getElementById('questions');
-    var contact = document.getElementById('contact');
+    var contact = document.getElementById('contact');    
     question.style.display = 'block';
     contact.style.display = 'none';
+    
 }

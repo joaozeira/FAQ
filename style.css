@@ -27,7 +27,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .faq-open {
@@ -169,20 +168,10 @@ body {
   position: relative;
   z-index: 10;
   margin-top: -35px !important;
-
 }
 
 .chat-questions .title h1 {
   font-size: var(--size-title);
-}
-
-.chat-questions .group-cards {
-  height: 275px;
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 /* scroll */
@@ -196,9 +185,18 @@ body {
   border-radius: 3px;
 }
 
+.chat-questions .group-cards {
+  height: 275px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+
 .chat-questions .group-cards .cards {
   width: 100%;
-  overflow: auto;
 
   display: flex;
   align-items: center;
@@ -234,7 +232,6 @@ body {
   align-items: center;
   justify-content: center;
 
-  margin-top: 7px;
   border: none;
   cursor: pointer;
 }
@@ -249,6 +246,7 @@ body {
   line-height: 0px;
 }
 
+/* NÃO ACHOU O QUE ESTAVA PROCURANDO? */
 .contatos {
   display: none;
   z-index: 20;
@@ -258,18 +256,18 @@ body {
   height: 400px;
   width: 320px;
   background-color: var(--primary-color);
+  border-radius: 10px 10px 0px 0px;
 }
 
 .contatos .header-contato {
   height: 63px;
-  padding: 0 20px;
+  padding: 0 25px;
   display: flex;
   justify-content: end;
   align-items: center;
-  
 }
 
-.contatos .header-contato svg{
+.contatos .header-contato svg {
   cursor: pointer;
 }
 
@@ -287,7 +285,6 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-
 }
 
 .contatos .details img {
@@ -302,13 +299,8 @@ body {
   border: none;
 
   background: linear-gradient(145deg, #2950d6, #305fff);
-  box-shadow: 18px 18px 60px #264bc8,
-    -18px -18px 60px #3467ff;
+  box-shadow: 18px 18px 60px #264bc8, -18px -18px 60px #3467ff;
 }
-
-
-
-
 
 /* page 2 */
 /* ----- CHATBOX COMPLETO----- */
@@ -359,10 +351,8 @@ body {
 }
 
 /* ----- CHATBOX ----- */
-/* QUERO CLICAR EM UMA PERGUNTAR E ME APARECER UMA RESPOSTA DE ACORDO COM A PERGUNTA */
-
 .chat-box {
-  background-image: url(backgroundw.png);
+  background-image: url(assets/backgroundw.png);
   height: 100%;
   position: relative;
   padding: 5px 15px 10px 15px;

@@ -106,7 +106,6 @@ body {
   right: 90px;
 }
 
-/* page1 */
 
 .faq {
   position: fixed;
@@ -115,6 +114,7 @@ body {
   z-index: 10;
 }
 
+/* page1 */
 .chat-questions {
   display: none;
   height: 400px;
@@ -140,14 +140,14 @@ body {
 }
 
 .chat-questions .header img {
-  height: 35px;
-  width: 35px;
+  height: 45px;
+  width: 45px;
   background-color: #fff;
   border-radius: 50%;
 }
 
 .chat-questions .header h3 {
-  padding: 15px;
+  padding: 5px;
   color: #fff;
   font-size: var(--font-size);
 }
@@ -186,29 +186,29 @@ body {
 }
 
 .chat-questions .group-cards {
-  height: 275px;
+  height: 274px;
   width: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
+
+  border: 1px solid var(--secondary-color);
 }
 
 .chat-questions .group-cards .cards {
+  background-color: yellow;
   width: 100%;
 
   display: flex;
   align-items: center;
-  flex-direction: column;
-
-  border-bottom: 3px solid var(--secondary-color);
-  border-right: 3px solid var(--secondary-color);
+  flex-direction: column;  
 }
 
 .chat-questions .group-cards .card {
   min-height: 70px;
-  width: 98%;
+  width: 100%;
   background-color: #fff;
 
   display: flex;
@@ -221,6 +221,12 @@ body {
   border-top: 3px solid var(--secondary-color);
 
   cursor: pointer;
+}
+
+.chat-questions p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: var(--font-size);
+  line-height: 0px;
 }
 
 .chat-questions .group-cards .last-cards {
@@ -240,13 +246,8 @@ body {
   color: #fff;
 }
 
-.chat-questions p {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: var(--font-size);
-  line-height: 0px;
-}
 
-/* NÃO ACHOU O QUE ESTAVA PROCURANDO? */
+
 .contatos {
   display: none;
   z-index: 20;
@@ -257,13 +258,16 @@ body {
   width: 320px;
   background-color: var(--primary-color);
   border-radius: 10px 10px 0px 0px;
+
+  
+  transition:  transform 0.5s ease-in;
 }
 
 .contatos .header-contato {
   height: 63px;
   padding: 0 25px;
   display: flex;
-  justify-content: end;
+  justify-content: start;
   align-items: center;
 }
 
@@ -271,15 +275,11 @@ body {
   cursor: pointer;
 }
 
-.contatos .details h1 {
-  text-align: center;
-  font-size: var(--font-size);
-  color: #fff;
-}
-
 .contatos .details {
   width: 100%;
-  height: 337px;
+  height: 70%;
+
+  
 
   display: flex;
   align-items: center;
@@ -287,19 +287,59 @@ body {
   flex-direction: column;
 }
 
-.contatos .details img {
+.contatos .details h1 {
+  width: 80%;
+  text-align: center;
+  font-size: var(--size-title);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.contatos .details P {
+  width: 80%;
+  text-align: center;
+  color: #fff;
+
+  font-size: 12px;
+}
+
+.contatos .details .qrcode{
+  background-color: #fff;
   height: 180px;
   width: 180px;
   border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 15px;
+}
+
+.contatos .details .qrcode img{
+  height: 130px;
+  width: 130px;
 }
 
 .contatos .details button {
-  height: 50px;
-  width: 50px;
-  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 
-  background: linear-gradient(145deg, #2950d6, #305fff);
-  box-shadow: 18px 18px 60px #264bc8, -18px -18px 60px #3467ff;
+  position: absolute;
+  bottom: 65px;
+  right: 55px;
+
+  background-color: #fff;
+  border: none;
+}
+
+.contatos .details button a{  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--primary-color);  
 }
 
 /* page 2 */
@@ -323,6 +363,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.38); }
+
+.chat-answers .header-answers .svg{
+  height: 40px;
+  width: 40px;
 }
 
 .chat-answers .header-answers svg {
@@ -332,9 +378,10 @@ body {
 .chat-answers .header-answers p {
   font-size: 12px;
   color: #fff;
+  
 }
 
-.chat-answers .header-answers div {
+.chat-answers .header-answers .details {
   text-align: center;
 }
 
@@ -344,10 +391,8 @@ body {
 }
 
 .chat-answers .header-answers img {
-  height: 35px;
-  width: 35px;
-  background-color: #fff;
-  border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }
 
 /* ----- CHATBOX ----- */

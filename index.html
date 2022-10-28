@@ -16,7 +16,7 @@
   <!-- Botão para abrir o FAQ -->
   <div class="faq-open" id="open-link">
     <!-- abrir faq -->
-    <img onclick="open_chat()" src="assets/user.png" />
+    <img onclick="open_chat()" src="assets/massinha.png" />
   </div>
   <!-- notificação após algum tempo -->
   <div class="notification" id="showNotification">
@@ -34,7 +34,7 @@
     <div class="chat-questions" id="questions">
       <div class="header">
         <div class="details">
-          <img src="assets/user.png" />
+          <img src="assets/massinha.png" />
           <h3>Massinha</h3>
         </div>
         <div class="close_chat">
@@ -80,32 +80,48 @@
 
       </div>        
       </div>
-
-      <div class="contatos" id="contact" onclick="lastCard()">
+      
+      <div class="contatos" id="contact" >
         <div class="header-contato">
-          <svg onclick="closeLastcard()" width="15" height="46" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="m18.75 5.25-13.5 13.5"></path>
-            <path d="M18.75 18.75 5.25 5.25"></path>
+          <svg onclick="closeLastcard()"  width="20" height="45" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 19.5 7.5 12 15 4.5"></path>
           </svg>
         </div>
 
         <div class="details">
-          <h1>Não achou o que estava procurando?</h1>
+          <h1>suporte</h1>
+          <p>Para falar com o nosso <strong>suporte</strong> basta ler o QRCode ou clicar no botão ao lado e ir direto para o whatsapp.</p>
+          
+          <div class="qrcode">
+            <img src="assets/qrcode.png" alt="">
+          </div>    
+          
+          <button>
+            <a href="http://wa.me/5584994712745">
+              <svg width="46" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </a>
+          </button>
+   
         </div>
- 
+        
     </div>
 
     <!-- page 2 -->
     <div class="chat-answers" id="answers" >
       <div class="header-answers">        
-        <svg onclick="back()" width="15" height="46" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 19.5 7.5 12 15 4.5"></path>
-        </svg>
-        <div>
+        <div class="svg">
+          <svg onclick="back()" width="20" height="45" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 19.5 7.5 12 15 4.5"></path>
+          </svg>
+        </div>
+        <div class="details">
           <h3>Massinha</h3>
           <p>Online</p>
-        </div>
-        <img src="assets/user.png" />
+        </div>        
+          <img src="assets/massinha-celular.png" />        
       </div>
 
       <!-- perguntas -->
@@ -126,27 +142,7 @@
           </div>
         </div>
       </div>
-
-
-
-      <!-- perfil foto -->
-      <!-- <div class="perfil" id="profile">
-        <header class="header-perfil">
-          <a onclick="back()"><h1><</h1></a>
-          <p>Perfil</p>
-        </header>
-
-        <div class="perfil-foto"><img src="assets/user.png" /></div>
-
-        <div class="details">
-          <div class="perfil-buttons">
-            <a href="#"><img src="assets/user.png" /></a>
-            <a href="#"><img src="assets/user.png" /></a>
-            <a href="#"><img src="assets/user.png" /></a>
-          </div>
-        </div>
-      </div> -->
-
+      
   </div>
 
     <script src="script.js"></script>

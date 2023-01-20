@@ -4,6 +4,7 @@ function open_chat() {
     var questions = document.getElementById("questions");
     var notification = document.getElementById("showNotification");
     questions.style.display = "block";
+    questions.style.transition ="display 2s"
     openLink.style.display = "none";
     notification.style.display = "none";
 }
